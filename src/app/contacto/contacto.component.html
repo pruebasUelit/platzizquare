@@ -1,0 +1,21 @@
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item">
+      <a routerLink="/lugares">Inicio</a>
+    </li>
+    <li class="breadcrumb-item active" aria-current="page">Contacto</li>
+  </ol>
+</nav>
+<div class="container">
+    <label>Nombre</label>
+    <input type="text" class="form-control" />
+    <br/>
+    <label>Correo</label>
+    <input type="email" class="form-control" />
+    <br/>
+    <label>Mensaje</label>
+    <textarea type="text" class="form-control"></textarea>
+    <hr>
+    <button type="button" class="btn btn-outline-success">Enviar</button>
+    <button type="button" class="btn btn-outline-danger" [routerLink]="['/lugares']">Cancelar</button>
+</div>

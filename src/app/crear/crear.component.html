@@ -1,0 +1,48 @@
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item">
+      <a routerLink="/lugares">Crear lugar</a>
+    </li>
+    <li class="breadcrumb-item active" aria-current="page">Contacto</li>
+  </ol>
+</nav>
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <h3>Datos del Negocio</h3>
+      <label>Nombre</label>
+      <input type="text" class="form-control" [(ngModel)]="lugar.nombre" />
+      <br/>
+      <label>Distancia</label>
+      <input type="number" class="form-control" [(ngModel)]="lugar.distancia" />
+      <br/>
+      <label>Cercania</label>
+      <input type="number" class="form-control" [(ngModel)]="lugar.cercania" />
+      <br/>
+      <label>Descripción</label>
+      <textarea type="text" class="form-control" [(ngModel)]="lugar.description"></textarea>
+      <br/>
+      <label>Plan</label>
+      <input type="text" class="form-control" [(ngModel)]="lugar.plan" />
+      <br/>
+    </div>
+    <div class="col">
+      <h3>Dirección</h3>
+      <label>Calle y numero</label>
+      <input type="text" class="form-control" [(ngModel)]="lugar.calle" />
+      <br/>
+      <label>Ciudad</label>
+      <input type="text" class="form-control" [(ngModel)]="lugar.ciudad" />
+      <br/>
+      <label>Pais</label>
+      <input type="text" class="form-control" [(ngModel)]="lugar.pais" />
+      <hr>
+
+    </div>
+  </div>
+  <div style="float:right; margin-right: 20px">
+    <button type="button" class="btn btn-outline-success" style="margin-right:20px" (click)="guardarLugar()">Enviar</button>
+    <button type="button" class="btn btn-outline-danger" [routerLink]="['/lugares']">Cancelar</button>
+  </div>
+
+</div>
